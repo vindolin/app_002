@@ -10,6 +10,11 @@ void main() {
   );
 }
 
+final tabData = {
+  'Schüler': const StudentScreen(),
+  'Checklisten': const ChecklistScreen(),
+};
+
 class ChecklistenApp extends StatelessWidget {
   const ChecklistenApp({super.key});
 
@@ -29,23 +34,18 @@ class Home extends ConsumerWidget {
         length: 2,
         child: Scaffold(
           appBar: AppBar(
-            bottom: const TabBar(
-              tabs: [
-                Tab(
-                  text: 'Schüler',
-                ),
-                Tab(
-                  text: 'Checklisten',
-                ),
-              ],
-            ),
+            bottom: TabBar(
+                tabs: tabData.keys
+                    .map(
+                      (title) => Tab(
+                        text: title,
+                      ),
+                    )
+                    .toList()),
             title: const Text('Checklisten'),
           ),
-          body: const TabBarView(
-            children: [
-              StudentScreen(),
-              ChecklistScreen(),
-            ],
+          body: TabBarView(
+            children: tabData.values.toList(),
           ),
         ),
       ),
