@@ -39,7 +39,7 @@ class Home extends ConsumerWidget {
                 ),
               ],
             ),
-            title: const Text('App 002'),
+            title: const Text('Demo App'),
           ),
           body: const TabBarView(
             children: [
