@@ -6,7 +6,7 @@ part of 'app_data_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$checklistsHash() => r'e2a2f475b7beaa26020702bfe899f4f3912639fb';
+String _$checklistsHash() => r'9b9483c6b62f5093ba30850f1de09e1e1ed58c0c';
 
 /// See also [Checklists].
 @ProviderFor(Checklists)

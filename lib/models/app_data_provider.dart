@@ -66,6 +66,8 @@ class Checklists extends _$Checklists {
     checklist.students.removeWhere(
       (student) => student.id == studentId,
     );
+    // trigger build
+    state = List.from(state);
   }
 }
 

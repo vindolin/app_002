@@ -35,11 +35,11 @@ class ChecklistAssignmentScreen extends ConsumerWidget {
                         ),
                     onChanged: (bool? value) {
                       // assign student to checklist
-                      checklists.assignStudent(id, students[index].id);
-                      // ref.watch(checklistsProvider.notifier).assignStudent(
-                      //       id,
-                      //       students[index].id,
-                      //     );
+                      if (value == true) {
+                        checklists.assignStudent(id, students[index].id);
+                      } else {
+                        checklists.unassignStudent(id, students[index].id);
+                      }
                     },
                   ),
                   Text(
