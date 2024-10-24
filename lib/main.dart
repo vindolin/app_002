@@ -6,12 +6,12 @@ import 'screens/checklist_screen.dart';
 
 void main() {
   runApp(
-    const ProviderScope(child: TestApp()),
+    const ProviderScope(child: ChecklistenApp()),
   );
 }
 
-class TestApp extends StatelessWidget {
-  const TestApp({super.key});
+class ChecklistenApp extends StatelessWidget {
+  const ChecklistenApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class Home extends ConsumerWidget {
                 ),
               ],
             ),
-            title: const Text('Demo App'),
+            title: const Text('Checklisten'),
           ),
           body: const TabBarView(
             children: [

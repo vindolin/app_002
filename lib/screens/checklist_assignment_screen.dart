@@ -14,9 +14,11 @@ class ChecklistAssignmentScreen extends ConsumerWidget {
     final students = ref.watch(studentsProvider);
     final checklists = ref.watch(checklistsProvider.notifier);
 
+    final checklistName = ref.watch(checklistsProvider).firstWhere((checklist) => checklist.id == id).name;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Checklist Assignment'),
+        title: Text('Schüler zu "$checklistName" zuweisen'),
       ),
       body: Center(
         child: ListView.builder(
