@@ -31,7 +31,7 @@ class Home extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     return MaterialApp(
       home: DefaultTabController(
-        length: 2,
+        length: tabData.length,
         child: Scaffold(
           appBar: AppBar(
             bottom: TabBar(
