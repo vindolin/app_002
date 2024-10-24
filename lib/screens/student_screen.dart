@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:faker/faker.dart';
 
 import '/models/app_data_provider.dart';
-import 'widgets/student_widget.dart';
+import 'widgets/student_list_widget.dart';
 
 class StudentScreen extends ConsumerWidget {
   const StudentScreen({super.key});
@@ -12,7 +12,7 @@ class StudentScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final students = ref.watch(studentsProvider.notifier);
     return Scaffold(
-      body: const StudentWidget(),
+      body: const StudentListWidget(),
       floatingActionButton: IconButton(
         onPressed: () {
           students.add(faker.person.name());

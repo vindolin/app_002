@@ -3,12 +3,13 @@ import 'package:flutter/material.dart';
 
 import '/models/app_data_provider.dart';
 
-class StudentWidget extends ConsumerWidget {
-  const StudentWidget({super.key});
+class StudentListWidget extends ConsumerWidget {
+  const StudentListWidget({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final students = ref.watch(studentsProvider);
+    students.sort((a, b) => a.name.compareTo(b.name));
 
     return ListView.builder(
       itemCount: students.length,

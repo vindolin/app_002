@@ -4,12 +4,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '/models/app_data_provider.dart';
 import '/screens/checklist_assignment_screen.dart';
 
-class ChecklistWidget extends ConsumerWidget {
-  const ChecklistWidget({super.key});
+class ChecklistListWidget extends ConsumerWidget {
+  const ChecklistListWidget({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final checklists = ref.watch(checklistsProvider);
+    checklists.sort((a, b) => a.name.compareTo(b.name));
 
     return ListView.builder(
       itemCount: checklists.length,
