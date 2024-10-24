@@ -1,8 +1,8 @@
-import 'package:app_002/models/app_data_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:faker/faker.dart';
 
+import '/models/app_data_provider.dart';
 import 'widgets/checklist_widget.dart';
 
 class ChecklistScreen extends ConsumerWidget {

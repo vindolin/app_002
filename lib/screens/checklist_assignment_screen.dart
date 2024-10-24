@@ -1,6 +1,7 @@
-import 'package:app_002/models/app_data_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '/models/app_data_provider.dart';
 
 // assign students to checklist
 
